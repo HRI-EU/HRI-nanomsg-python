@@ -337,6 +337,9 @@ class Socket(object):
         self._endpoints.append(ep)
         return ep
 
+    def is_connected(self):
+        return wrapper.nn_isconnected(self._fd)
+
     def close(self):
         """Close the socket"""
         if self.is_open():

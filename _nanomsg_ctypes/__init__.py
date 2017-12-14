@@ -73,6 +73,7 @@ NN_EXPORT void *nn_allocmsg (size_t size, int type);
 NN_EXPORT int nn_freemsg (void *msg);
 NN_EXPORT int nn_socket (int domain, int protocol);
 NN_EXPORT int nn_close (int s);
+NN_EXPORT int nn_isconnected (int s);
 NN_EXPORT int nn_setsockopt (int s, int level, int option, const void \
 *optval, size_t optvallen);
 NN_EXPORT int nn_getsockopt (int s, int level, int option, void *optval, \
@@ -129,6 +130,9 @@ nn_connect.__doc__ = "add a remote endpoint to the socket"
 
 nn_shutdown = _nn_shutdown
 nn_shutdown.__doc__ = "remove an endpoint from a socket"
+
+nn_isconnected = _nn_isconnected
+nn_isconnected.__doc__ = "Check if the given socket is connected"
 
 
 def create_writable_buffer(size):
