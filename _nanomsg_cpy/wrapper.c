@@ -517,7 +517,7 @@ static PyMethodDef module_methods[] = {
     {"nn_errno", _nanomsg_cpy_nn_errno, METH_VARARGS, "retrieve the current errno"},
     {"nn_strerror", _nanomsg_cpy_nn_strerror, METH_VARARGS, "convert an error number into human-readable string"},
     {"nn_socket", _nanomsg_cpy_nn_socket, METH_VARARGS, "create an SP socket"},
-    {"nn_isconnected", _nanomsg_cpy_nn_close, METH_VARARGS, "check if the given socket is connected"},
+    {"nn_isconnected", _nanomsg_cpy_nn_isconnected, METH_VARARGS, "check if the given socket is connected"},
     {"nn_close", _nanomsg_cpy_nn_close, METH_VARARGS, "close an SP socket"},
     {"nn_setsockopt", _nanomsg_cpy_nn_setsockopt, METH_VARARGS, _nanomsg_cpy_nn_setsockopt__doc__},
     {"nn_getsockopt", _nanomsg_cpy_nn_getsockopt, METH_VARARGS, _nanomsg_cpy_nn_getsockopt__doc__},
